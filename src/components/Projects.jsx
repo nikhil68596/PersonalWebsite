@@ -93,27 +93,23 @@ const projectContent = [
     name: "RuVerify",
     component: (
       <div className="personify-content flex flex-col gap-[16px]">
-        <h1 className="text-center bold font-bold text-[18px]">
-        RuVerify
-        </h1>
+        <h1 className="text-center bold font-bold text-[18px]">RuVerify</h1>
         <h3>
           <i>HackRU Spring 2023- Fully finished side project</i>
         </h3>
         <p>
-          You are a typical Rutgers student going to the school gym. But as you are entering, you 
-          forget your ID. Oh no, what do I do? Meet RuVerify, a facial recognition app that can be
-          used to scan in student's faces instead of scanning in IDs. Using OpenCV and MySQL, it compares
-          the facial recognition scan with the corresponding student id photo to provide entry. Amazing that
-          this is a fully-Python based application.
+          You are a typical Rutgers student going to the school gym. But as you
+          are entering, you forget your ID. Oh no, what do I do? Meet RuVerify,
+          a facial recognition app that can be used to scan in student's faces
+          instead of scanning in IDs. Using OpenCV and MySQL, it compares the
+          facial recognition scan with the corresponding student id photo to
+          provide entry. Amazing that this is a fully-Python based application.
         </p>
         <p>
           <b>Tech Stack:</b> Flet (Python), OpenCV, MySQL, NumPy, Pandas
         </p>
         <button className="px-4 py-2 border border-blue-500 text-blue-500 rounded-lg hover:bg-blue-500 hover:text-white transition w-40 block mx-auto">
-          <a
-            href="https://github.com/nikhil68596/RuVerify"
-            target="_blank"
-          >
+          <a href="https://github.com/nikhil68596/RuVerify" target="_blank">
             Github Link
           </a>
         </button>
@@ -129,10 +125,10 @@ const Projects = () => {
       <br />
       <Slideshow
         imgs={[
-          "../src/assets/images/Personify.png",
-          "../src/assets/images/RUAAA.png",
-          "../src/assets/images/PersonalWebsite.png",
-          "../src/assets/images/RuVerify.png",
+          "../../images/Personify.png",
+          "../../images/RUAAA.png",
+          "../../images/PersonalWebsite.png",
+          "../../images/RUVerify.png",
         ]}
       />
     </div>

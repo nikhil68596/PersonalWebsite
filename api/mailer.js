@@ -53,11 +53,13 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-// Sample route
-app.post("/contact", (req, res) => {
+
+export default async function handler(req, res) {
+  if (req.method !== "POST") {
+    return res.status(405).json({ message: "Method Not Allowed" });
+  }
+
   const { name, email, subject, message } = req.body;
-  console.log(req.body); // Logs the request body
-  res.json({ message: "Data received!", receivedData: req.body });
 
   const mailOptions = {
     from: `${name}`,
@@ -83,4 +85,4 @@ app.post("/contact", (req, res) => {
 
   //Use the transporter service for sending emails.
   transporter.sendMail(mailOptions, testingFunc);
-});
+};
