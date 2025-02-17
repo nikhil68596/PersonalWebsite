@@ -1,0 +1,19 @@
+.yo {
+    border: 1px solid #d1d5db;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+  
+  @keyframes shake {
+    10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90% {
+        transform: translateX(-10px);
+     }
+    15%, 25%, 35%, 45%, 55%, 65%, 75%, 85% {
+        transform: translateX(10px);
+    }
+  }
+
+  .yo:hover{
+    animation: shake 0.8s cubic-bezier(.36,.07,.19,.97) ;
+  }
