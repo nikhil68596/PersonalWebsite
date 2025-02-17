@@ -125,10 +125,10 @@ const Projects = () => {
       <br />
       <Slideshow
         imgs={[
-          "../../images/Personify.png",
-          "../../images/RUAAA.png",
-          "../../images/PersonalWebsite.png",
-          "../../images/RUVerify.png",
+          "images/Personify.png",
+          "images/RUAAA.png",
+          "images/PersonalWebsite.png",
+          "images/RUVerify.png",
         ]}
       />
     </div>
