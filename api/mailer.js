@@ -29,7 +29,7 @@ const getEmailSecret = async () => {
   try {
     const response = await secretsManagerClient.send(
       new GetSecretValueCommand({
-        SecretId: "Email_Password",
+        SecretId: "PASSWORD",
         VersionStage: "AWSCURRENT",
       })
     );
