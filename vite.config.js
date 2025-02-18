@@ -7,5 +7,6 @@ export default defineConfig({
   esbuild: {
     jsx: 'automatic', // Ensures JSX syntax works in .js files
   },
-  base: '/'
+  base: '/',
+  publicDir: 'public'
 })
