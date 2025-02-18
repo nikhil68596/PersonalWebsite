@@ -29,7 +29,7 @@ const getEmailSecret = async () => {
   try {
     const response = await secretsManagerClient.send(
       new GetSecretValueCommand({
-        SecretId: "PASSWORD",
+        SecretId: "arn:aws:secretsmanager:us-east-1:412381777713:secret:Email_Password-uQRzUF",
         VersionStage: "AWSCURRENT",
       })
     );
@@ -68,7 +68,7 @@ export default async function handler(req, res) {
 
   try {
     const secret = await getEmailSecret();
-
+    console.log(secret)
     const transporter = createTransporter(secret["PASSWORD"]);
 
     const mailOptions = {
