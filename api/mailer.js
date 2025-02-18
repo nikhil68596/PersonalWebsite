@@ -17,6 +17,13 @@ const secretsManagerClient = new SecretsManagerClient({
   region: "us-east-1",
 });
 
+//Handling cors properly 
+const corsHandler = cors({
+  origin: "https://personal-website-one-psi-46.vercel.app", 
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+});
+
 //Retrieving the secret from my email password
 const getEmailSecret = async () => {
   try {
@@ -46,6 +53,13 @@ const createTransporter = (emailPassword) => {
 };
 
 export default async function handler(req, res) {
+  if (req.method === "OPTIONS") {
+    corsHandler(req, res, () => {
+      res.status(200).end();
+    });
+    return;
+  }
+
   if (req.method !== "POST") {
     return res.status(405).json({ message: "Method Not Allowed" });
   }
@@ -60,7 +74,7 @@ export default async function handler(req, res) {
     const mailOptions = {
       from: `${name}`,
       replyTo: `<${email}>`,
-      to: "nikhilsai.munagala@gmail.com",
+      to: "nikhilsai.munagala@gmail.com", 
       subject: subject,
       text: message,
     };
