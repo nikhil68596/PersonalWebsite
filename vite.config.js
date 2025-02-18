@@ -6,5 +6,6 @@ export default defineConfig({
   plugins: [react()],
   esbuild: {
     jsx: 'automatic', // Ensures JSX syntax works in .js files
-  }
+  },
+  base: '/'
 })
