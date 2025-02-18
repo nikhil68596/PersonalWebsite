@@ -86,6 +86,6 @@ export default async function handler(req, res) {
       return res.status(200).json({ message: "Email sent successfully" });
     });
   } catch (error) {
-    return res.status(500).json({ message: "Internal server error", details: error.message });
+    return res.status(502).json({ message: "Internal server error", details: error.message });
   }
 }
