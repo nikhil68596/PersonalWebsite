@@ -81,14 +81,11 @@ export default async function handler(req, res) {
 
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
-        console.error("Error sending email: ", error);
         return res.status(501).json({ message: "Failed to send email" });
       }
-      console.log("Email sent: ", info.response);
       return res.status(200).json({ message: "Email sent successfully" });
     });
   } catch (error) {
-    console.error("Failed to process the request: ", error);
-    return res.status(500).json({ message: "Internal server error" });
+    return res.status(500).json({ message: "Internal server error", details: error.message });
   }
 }
