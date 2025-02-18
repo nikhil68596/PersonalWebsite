@@ -6,10 +6,6 @@ const Home = () => {
     <div className="flex justify-between text-white">
       <div id="images" className="flex flex-column">
         <img className="yo" src="/images/NikhilMunagala.png" />
-        <div>
-          <img className="img1" src="/images/Pickleball.png" />
-          <img className="img2" src="/images/Netflix.png" />
-        </div>
       </div>
       <div className="flex-col pl-4">
         <h5>Hey, my name is Nikhil Munagala!</h5>
