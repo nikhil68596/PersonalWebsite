@@ -20,7 +20,7 @@ const secretsManagerClient = new SecretsManagerClient({
 //Handling cors properly 
 const corsHandler = cors({
   origin: "https://personal-website-one-psi-46.vercel.app", 
-  methods: ["GET", "POST", "OPTIONS"],
+  methods: ["POST"],
   allowedHeaders: ["Content-Type", "Authorization"]
 });
 

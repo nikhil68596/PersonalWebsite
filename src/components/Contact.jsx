@@ -77,7 +77,7 @@ const Contact = () => {
     }
 
     //Make a post request to the contact endpoint.
-    axios.post('https://personal-website-fnwpmg64f-nikhil-munagalas-projects.vercel.app/api/mailer', emailData)
+    axios.post('https://personal-website-one-psi-46.vercel.app/api/mailer', emailData)
     .then(response => {
       //Clear the fields (variables + input fields)
       setPersonName("");
