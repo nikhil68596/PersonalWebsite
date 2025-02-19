@@ -15,6 +15,10 @@ app.use(express.json());
 // AWS Secrets Manager setup
 const secretsManagerClient = new SecretsManagerClient({
   region: "us-east-1",
+  credentials: {
+    accessKeyId: process.env.ACCESS_KEY_ID,
+    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+  }
 });
 
 //Handling cors properly 
