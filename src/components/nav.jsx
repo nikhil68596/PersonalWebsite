@@ -71,7 +71,6 @@ const Nav = () => {
                   <a href={`#${component[0]}`}>{component[0]}</a>
                 </li>
               ))}
-              <PdfLink />
             </ul>
           </div>
         </div>
