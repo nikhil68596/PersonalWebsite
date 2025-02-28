@@ -95,7 +95,7 @@ const projectContent = [
       <div className="personify-content flex flex-col gap-[16px]">
         <h1 className="text-center bold font-bold text-[18px]">RuVerify</h1>
         <h3>
-          <i>HackRU Spring 2023- Fully finished side project</i>
+          <i>HackRU Spring 2023 Project</i>
         </h3>
         <p>
           You are a typical Rutgers student going to the school gym. But as you
