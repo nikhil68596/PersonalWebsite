@@ -37,10 +37,9 @@ const Nav = () => {
         <ul className="text-center text-xl p-20">
           {Object.entries(comps).map((component, name) => (
             <li key={name}>
-              <a href={`#${name}`}>{name}</a>
+              <a href={`#${component[0]}`}>{component[0]}</a>
           </li>
           ))}
-          <PdfLink />
         </ul>
       </div>
     </>
