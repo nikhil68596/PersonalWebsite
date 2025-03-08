@@ -53,11 +53,11 @@ const Nav = () => {
   return (
     <nav
       className={`sticky top-0 left-0 w-full z-50 transition duration-300 ${
-        isScrolled ? "bg-gray-300" : "bg-slate-900 shadow-lg"
+        isScrolled ? "bg-slate-400" : "bg-slate-900 shadow-lg"
       }`}
     >
       <div className={`h-10vh flex justify-between z-50 lg:py-5 px-5 py-4 ${
-        isScrolled ? "text-black" : "text-white"
+        isScrolled ? "text-gray-600" : "text-white"
       }`}>
         <div className="flex items-center flex-1">
           <span className="text-xl font-bold">Nikhil Munagala</span>
